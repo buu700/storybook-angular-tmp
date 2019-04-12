@@ -32,7 +32,7 @@ var componentClass = /** @class */ (function () {
 
 var getModule = function (declarations, entryComponents, bootstrap, data, moduleMetadata) {
     var moduleMeta = {
-        declarations: [declarations[0]].concat((moduleMetadata.declarations || [])),
+        declarations: declarations.concat((moduleMetadata.declarations || [])),
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule].concat((moduleMetadata.imports || [])),
         providers: [{ provide: app_token_1.STORY, useValue: __assign({}, data) }].concat((moduleMetadata.providers || [])),
         entryComponents: entryComponents.concat((moduleMetadata.entryComponents || [])),
@@ -55,7 +55,11 @@ var initModule = function (storyFn) {
         component: AnnotatedComponent,
         props: props,
     };
-    return getModule([app_component_1.AppComponent, AnnotatedComponent], [AnnotatedComponent], [app_component_1.AppComponent], story, moduleMetadata);
+    var declarations = [app_component_1.AppComponent];
+    if (template) {
+        declarations.push(AnnotatedComponent);
+    }
+    return getModule(declarations, [AnnotatedComponent], [app_component_1.AppComponent], story, moduleMetadata);
 };
 var staticRoot = document.getElementById('root');
 var insertDynamicRoot = function () {

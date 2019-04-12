@@ -22,7 +22,7 @@ const getModule = (
   moduleMetadata: NgModuleMetadata
 ) => {
   const moduleMeta = {
-    declarations: [declarations[0], ...(moduleMetadata.declarations || [])],
+    declarations: [...declarations, ...(moduleMetadata.declarations || [])],
     imports: [BrowserModule, FormsModule, ...(moduleMetadata.imports || [])],
     providers: [{ provide: STORY, useValue: { ...data } }, ...(moduleMetadata.providers || [])],
     entryComponents: [...entryComponents, ...(moduleMetadata.entryComponents || [])],
@@ -51,7 +51,7 @@ const initModule = (storyFn: IStoryFn) => {
     props,
   };
 
-  return getModule([AppComponent, AnnotatedComponent], [AnnotatedComponent], [AppComponent], story, moduleMetadata);
+  return getModule([AppComponent, ...(template ? [AnnotatedComponent] : [])], [AnnotatedComponent], [AppComponent], story, moduleMetadata);
 };
 
 const staticRoot = document.getElementById('root');
