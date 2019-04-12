@@ -1,33 +1,4 @@
 {
-  "_args": [
-    [
-      "@storybook/angular@5.0.6",
-      "/Users/buu700/plusminus/AccelerationClient"
-    ]
-  ],
-  "_from": "@storybook/angular@5.0.6",
-  "_id": "@storybook/angular@5.0.6",
-  "_inBundle": false,
-  "_integrity": "sha512-fY1mZ5rQSua8LTjMpU+heSE5h3ygzUcDj9fkIclfBk8V2/E9p+FilPXM3TfaZtAEtsw6VMzRLGZXnA+yc535/w==",
-  "_location": "/@storybook/angular",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "@storybook/angular@5.0.6",
-    "name": "@storybook/angular",
-    "escapedName": "@storybook%2fangular",
-    "scope": "@storybook",
-    "rawSpec": "5.0.6",
-    "saveSpec": null,
-    "fetchSpec": "5.0.6"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/@storybook/angular/-/angular-5.0.6.tgz",
-  "_spec": "5.0.6",
-  "_where": "/Users/buu700/plusminus/AccelerationClient",
   "bin": {
     "build-storybook": "./bin/build.js",
     "start-storybook": "./bin/index.js",
