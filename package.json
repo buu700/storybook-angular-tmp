@@ -53,8 +53,5 @@
     "type": "git",
     "url": "git+https://github.com/storybooks/storybook.git"
   },
-  "scripts": {
-    "prepare": "node ../../scripts/prepare.js"
-  },
   "version": "5.0.7"
 }
